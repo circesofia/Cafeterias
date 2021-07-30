@@ -2,7 +2,6 @@
 //  CafeteriasTests.swift
 //  CafeteriasTests
 //
-//  Created by HOMERO GARCIA PUENTE on 30/07/21.
 //
 
 import XCTest
