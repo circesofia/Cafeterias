@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uZR-a2-yct">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uZR-a2-yct">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Fime-->
+        <!--Cafeterias-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cafeterias" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,8 +21,8 @@
                                 <rect key="frame" x="0.0" y="132" width="414" height="730"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="71" id="LZn-or-unU">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="71"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cafeteria" rowHeight="71" id="LZn-or-unU" customClass="TableViewCell" customModule="Cafeterias" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LZn-or-unU" id="b81-dd-Yjd">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
@@ -34,14 +34,27 @@
                                                         <segue destination="HSr-89-3pq" kind="show" id="Rca-tc-piF"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6M-zN-G88">
+                                                    <rect key="frame" x="43" y="25" width="153" height="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="K6M-zN-G88" secondAttribute="bottom" constant="10" id="9q3-FE-0WZ"/>
+                                                <constraint firstItem="sin-mH-Thq" firstAttribute="leading" secondItem="K6M-zN-G88" secondAttribute="trailing" constant="120" id="BiR-hX-vd6"/>
+                                                <constraint firstItem="K6M-zN-G88" firstAttribute="top" secondItem="b81-dd-Yjd" secondAttribute="topMargin" constant="14" id="Q0h-uW-Z73"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="sin-mH-Thq" secondAttribute="bottom" constant="10" id="TdC-Io-BM4"/>
+                                                <constraint firstItem="K6M-zN-G88" firstAttribute="leading" secondItem="b81-dd-Yjd" secondAttribute="leadingMargin" constant="23" id="VKy-k8-Ile"/>
                                                 <constraint firstItem="sin-mH-Thq" firstAttribute="top" secondItem="b81-dd-Yjd" secondAttribute="topMargin" constant="9" id="i8y-mZ-10z"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="sin-mH-Thq" secondAttribute="trailing" constant="32" id="lWk-aK-TIL"/>
                                                 <constraint firstItem="sin-mH-Thq" firstAttribute="leading" secondItem="b81-dd-Yjd" secondAttribute="leadingMargin" constant="296" id="vq2-9F-4d1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cafeName" destination="K6M-zN-G88" id="Itz-2A-fVY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -64,13 +77,16 @@
                             <constraint firstItem="gwv-WZ-ej5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ymu-sk-IRF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Fime" id="EzR-mI-MB5"/>
+                    <navigationItem key="navigationItem" title="Cafeterias" id="EzR-mI-MB5"/>
+                    <connections>
+                        <outlet property="tableView" destination="6bO-lG-aax" id="MkM-dX-vaW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="434.78260869565219" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--cafeteria-->
         <scene sceneID="LrP-zE-4J9">
             <objects>
                 <viewController id="HSr-89-3pq" sceneMemberID="viewController">
@@ -79,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8KU-dz-mOc">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JBE-5U-hrd">
                                     <size key="itemSize" width="128" height="128"/>
@@ -88,18 +104,19 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IOy-aM-FvJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="itemCell" id="IOy-aM-FvJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HL9-UM-UFZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="150" height="150"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ePq-7k-fKJ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -115,7 +132,7 @@
                             <constraint firstItem="8KU-dz-mOc" firstAttribute="leading" secondItem="ePq-7k-fKJ" secondAttribute="leading" id="oxv-1p-tD8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nh6-Wp-0YT"/>
+                    <navigationItem key="navigationItem" title="cafeteria" id="nh6-Wp-0YT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awu-mw-QKN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

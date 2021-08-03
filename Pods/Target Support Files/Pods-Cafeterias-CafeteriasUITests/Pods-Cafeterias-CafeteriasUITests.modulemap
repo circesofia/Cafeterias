@@ -1,0 +1,6 @@
+framework module Pods_Cafeterias_CafeteriasUITests {
+  umbrella header "Pods-Cafeterias-CafeteriasUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
