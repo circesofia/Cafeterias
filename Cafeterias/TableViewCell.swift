@@ -12,6 +12,7 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var cafeName: UILabel!
     
+    @IBOutlet weak var cafeImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

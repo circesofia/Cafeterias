@@ -6,9 +6,18 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
+import FirebaseStorageUI
 class ViewController: UIViewController {
     
     let ref =  Database.database().reference()
+    // Get a reference to the storage service using the default Firebase App
+    let storage = Storage.storage()
+    
+
+   
+   
+    
     var cafes = [cafeteria]()
     var cafes1 = ["name":"fime"]
     @IBOutlet weak var tableView: UITableView!
@@ -22,30 +31,29 @@ class ViewController: UIViewController {
     }
 //trae los items
     func dataFirebase() {
-      /*  self.ref.child("cafeterias").child("fime").child("botanas").child("doritos").child("price").setValue(50)
-        self.ref.child("cafeterias").child("fime").child("botanas").child("doritos").child("name").setValue("Doritos Nacho")
-        self.ref.child("cafeterias").child("civil").child("botanas").child("doritos").child("price").setValue(50)
-        self.ref.child("cafeterias").child("civil").child("botanas").child("doritos").child("name").setValue("Doritos Nacho")
-        self.ref.child("cafeterias").child("facpya").child("botanas").child("doritos").child("price").setValue(50)
-        self.ref.child("cafeterias").child("facpya").child("botanas").child("doritos").child("name").setValue("Doritos Nacho")*/
+        
+        
         self.ref.child("cafeterias").observeSingleEvent(of: .value){
          (snapshot) in
          let data =  snapshot.value as? [String:Any]
-     //    print(data!)
-         print(data!)
+     
+         //print(data!)
          if let unwrapped = data {
              for cafe in unwrapped{
-                 print(cafe.key)
+              //  print(cafe as AnyObject)
                  let cafet = cafeteria(name:cafe.key)
                self.cafes.append(cafet)
                self.tableView.reloadData()
              }
-            print(self.cafes.count)
+         
          }
          
         }
-         
-        print("here ", cafes.count)
+       
+        
+       
+
+      
     }
     
 
@@ -65,13 +73,21 @@ extension ViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let storageRef = storage.reference()
+        
+        
+        
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cafeteria", for: indexPath) as! TableViewCell
         
         let con = cafes[indexPath.row]
-        print(con.name)
+        let ref = storageRef.child("\(con.name)\(".jpg")") //imageReference
         cell.cafeName.text = con.name
-        
-        
+      
+        cell.cafeImage.sd_setImage(with: ref)
+        cell.cafeImage.layer.cornerRadius = cell.frame.height / 2
+       
         return cell
     }
 }
