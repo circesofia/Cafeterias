@@ -9,6 +9,8 @@ target 'Cafeterias' do
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
+pod 'FirebaseUI/Storage'
+pod 'Nuke', '~> 9.0'
   target 'CafeteriasTests' do
     inherit! :search_paths
     # Pods for testing

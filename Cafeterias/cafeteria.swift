@@ -9,8 +9,9 @@ import Foundation
 
 class cafeteria{
     var name: String
-    
-    init(name:String) {
+    var image: String
+    init(name:String, image:String) {
         self.name = name
+        self.image = image
     }
 }

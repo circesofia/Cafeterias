@@ -18,6 +18,10 @@
 		44F1CBC25F161C83762352EC /* Pods_Cafeterias_CafeteriasUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CA369510EC426230B9254D /* Pods_Cafeterias_CafeteriasUITests.framework */; };
 		DA5338FD2E4230D812A2FBA0 /* Pods_Cafeterias.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5325180E4510C81D5AD1438 /* Pods_Cafeterias.framework */; };
 		DAC9D6F721AC125919E16421 /* Pods_CafeteriasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E5464A7414285E4548911F /* Pods_CafeteriasTests.framework */; };
+		E65C051526BCCA4E00D5DEA7 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C051226BCCA4E00D5DEA7 /* ItemCollectionViewCell.swift */; };
+		E65C051626BCCA4E00D5DEA7 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E65C051326BCCA4E00D5DEA7 /* ItemCollectionViewCell.xib */; };
+		E65C051726BCCA4E00D5DEA7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C051426BCCA4E00D5DEA7 /* MenuViewController.swift */; };
+		E65C051B26BCD8CE00D5DEA7 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C051A26BCD8CE00D5DEA7 /* item.swift */; };
 		E663CCFD26B6202500259C19 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E663CCFC26B6202500259C19 /* TableViewCell.swift */; };
 		E663CCFE26B6212200259C19 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E663CCFC26B6202500259C19 /* TableViewCell.swift */; };
 		E663CCFF26B6212200259C19 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E663CCFC26B6202500259C19 /* TableViewCell.swift */; };
@@ -66,6 +70,10 @@
 		C070A74E86CAEAA7C6209024 /* Pods-Cafeterias-CafeteriasUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafeterias-CafeteriasUITests.debug.xcconfig"; path = "Target Support Files/Pods-Cafeterias-CafeteriasUITests/Pods-Cafeterias-CafeteriasUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D6CA369510EC426230B9254D /* Pods_Cafeterias_CafeteriasUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cafeterias_CafeteriasUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAEEA46DDD9AC32DE415BD15 /* Pods-Cafeterias.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafeterias.release.xcconfig"; path = "Target Support Files/Pods-Cafeterias/Pods-Cafeterias.release.xcconfig"; sourceTree = "<group>"; };
+		E65C051226BCCA4E00D5DEA7 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCollectionViewCell.swift; path = ../../../ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		E65C051326BCCA4E00D5DEA7 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemCollectionViewCell.xib; path = ../../../ItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		E65C051426BCCA4E00D5DEA7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = ../../../MenuViewController.swift; sourceTree = "<group>"; };
+		E65C051A26BCD8CE00D5DEA7 /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
 		E663CCFC26B6202500259C19 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E663CD0026B627AC00259C19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E6C4AC6926B73E4B00990616 /* cafeteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafeteria.swift; sourceTree = "<group>"; };
@@ -124,6 +132,9 @@
 		2B6615BD26B4C0D700638FAD /* Cafeterias */ = {
 			isa = PBXGroup;
 			children = (
+				E65C051226BCCA4E00D5DEA7 /* ItemCollectionViewCell.swift */,
+				E65C051326BCCA4E00D5DEA7 /* ItemCollectionViewCell.xib */,
+				E65C051426BCCA4E00D5DEA7 /* MenuViewController.swift */,
 				E663CD0026B627AC00259C19 /* GoogleService-Info.plist */,
 				2B6615BE26B4C0D700638FAD /* AppDelegate.swift */,
 				2B6615C026B4C0D700638FAD /* SceneDelegate.swift */,
@@ -134,6 +145,7 @@
 				2B6615CC26B4C0DA00638FAD /* Info.plist */,
 				E663CCFC26B6202500259C19 /* TableViewCell.swift */,
 				E6C4AC6926B73E4B00990616 /* cafeteria.swift */,
+				E65C051A26BCD8CE00D5DEA7 /* item.swift */,
 			);
 			path = Cafeterias;
 			sourceTree = "<group>";
@@ -289,6 +301,7 @@
 			files = (
 				2B6615CB26B4C0DA00638FAD /* LaunchScreen.storyboard in Resources */,
 				E663CD0126B627AC00259C19 /* GoogleService-Info.plist in Resources */,
+				E65C051626BCCA4E00D5DEA7 /* ItemCollectionViewCell.xib in Resources */,
 				2B6615C826B4C0DA00638FAD /* Assets.xcassets in Resources */,
 				2B6615C626B4C0D700638FAD /* Main.storyboard in Resources */,
 			);
@@ -421,6 +434,9 @@
 				2B6615C326B4C0D700638FAD /* ViewController.swift in Sources */,
 				E663CCFD26B6202500259C19 /* TableViewCell.swift in Sources */,
 				2B6615BF26B4C0D700638FAD /* AppDelegate.swift in Sources */,
+				E65C051726BCCA4E00D5DEA7 /* MenuViewController.swift in Sources */,
+				E65C051B26BCD8CE00D5DEA7 /* item.swift in Sources */,
+				E65C051526BCCA4E00D5DEA7 /* ItemCollectionViewCell.swift in Sources */,
 				E6C4AC6A26B73E4B00990616 /* cafeteria.swift in Sources */,
 				2B6615C126B4C0D700638FAD /* SceneDelegate.swift in Sources */,
 			);

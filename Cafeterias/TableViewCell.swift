@@ -9,10 +9,19 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    static var cafeString = "";
     
     @IBOutlet weak var cafeName: UILabel!
     
+    @IBOutlet weak var cafeImage: UIImageView!
     
+    @IBAction func showButton(_ sender: UIButton)  {
+       
+        var cafeteriaName = cafeName.text!
+        TableViewCell.cafeString = cafeteriaName
+        
+        
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
